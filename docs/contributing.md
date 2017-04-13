@@ -9,7 +9,7 @@ little bit helps, and credit will always be given.
 __Report Bugs__
 
 Report bugs at 
-[https://github.com/daspanel/daspanel-redis/issues](https://github.com/daspanel/daspanel-redis/issues)
+[https://github.com/daspanel/redis/issues](https://github.com/daspanel/redis/issues)
 
 If you are reporting a bug, please include:
 
@@ -36,7 +36,7 @@ articles, and such.
 __Submit Feedback__
 
 The best way to send feedback is to file an issue at 
-[https://github.com/daspanel/daspanel-redis/issues](https://github.com/daspanel/daspanel-redis/issues)
+[https://github.com/daspanel/redis/issues](https://github.com/daspanel/redis/issues)
 
 If you are proposing a feature:
 
@@ -48,14 +48,14 @@ If you are proposing a feature:
 Get Started!
 ------------
 
-Ready to contribute? Here's how to set up `daspanel-redis` for local development.
+Ready to contribute? Here's how to set up `redis` for local development.
 
- 1. Fork the `daspanel-redis` repo on GitHub.
+ 1. Fork the `redis` repo on GitHub.
  2. Clone your fork locally:
 
      <!-- language: lang-bash -->
 
-            $ git clone git@github.com:your_name_here/daspanel-redis.git
+            $ git clone git@github.com:your_name_here/redis.git
 
  3. Create a branch for local development:
 

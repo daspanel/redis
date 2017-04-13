@@ -4,7 +4,7 @@
 If you find a bug or another type of issue let us know about it.
 
 Open a new issue at 
-[https://github.com/daspanel/daspanel-redis/issues](https://github.com/daspanel/daspanel-redis/issues)
+[https://github.com/daspanel/redis/issues](https://github.com/daspanel/redis/issues)
 
 If you are reporting a bug, please include:
 

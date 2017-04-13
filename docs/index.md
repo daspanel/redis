@@ -4,7 +4,7 @@
 Docker image for Redis server used in the Dspanel project.
 
 * Free software: MIT license
-* Documentation: https://github.com/daspanel/daspanel-redis
+* Documentation: https://github.com/daspanel/redis
 
 ## Daspanel environment variables
 | Variable | Optional      | Example Value | Purpose
@@ -27,17 +27,17 @@ none
 ## How to use
 Get
 ```shell
-docker pull daspanel/daspanel-redis:latest
+docker pull daspanel/redis:latest
 ```
 
 Run
 ```shell
-docker run -e DASPANEL_MASTER_EMAIL=my@email.com daspanel/daspanel-redis:latest
+docker run -e DASPANEL_MASTER_EMAIL=my@email.com daspanel/redis:latest
 ```
 
 Run with interactive shell 
 ```shell
-docker run -it -e DASPANEL_MASTER_EMAIL=my@email.com daspanel/daspanel-redis:latest /bin/sh
+docker run -it -e DASPANEL_MASTER_EMAIL=my@email.com daspanel/redis:latest /bin/sh
 ```
 
 ## Features

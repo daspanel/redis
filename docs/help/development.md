@@ -5,7 +5,7 @@ How to use this repositorie for local development.
 
 ## Quick Start
 ``` sh
-    git clone https://github.com/daspanel/daspanel-redis
+    git clone https://github.com/daspanel/redis
     git remote rm origin
     # hack on source/Dockerfile
     make clean clean-image clean-image-dangling build
@@ -34,7 +34,7 @@ You can test in several ways
 1. Run a container using this image and getting an interactive shell:
     <!-- language: lang-sh -->
 
-        docker-compose run daspanel-redis /bin/sh
+        docker-compose run redis /bin/sh
 
     All content inside the `src` dir will be avaiable on the `/app` dir of the 
 container and you can work

@@ -71,7 +71,7 @@ the compose file:
 ``` yaml
 version: '2'
 services:
-    daspanel-daspanel-redis:
+    daspanel-redis:
         build:
             context: .
             dockerfile: Dockerfile
@@ -81,7 +81,7 @@ services:
 If you want to access the shell of an container started before use this command:
 
 ``` sh
-docker exec -ti daspanel-redis-daspanel-redis_1 /bin/sh
+docker exec -ti daspanel-redis_1 /bin/sh
 ```
 You can get the name of the running container's using:
 

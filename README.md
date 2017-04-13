@@ -4,7 +4,7 @@
 Docker image for Redis server used in the Dspanel project.
 
 * Free software: MIT license
-* Documentation: <https://github.com/daspanel/daspanel-redis/blob/master/docs/index.md> or <https://daspanel.github.io/daspanel-redis>
+* Documentation: <https://github.com/daspanel/redis/blob/master/docs/index.md> or <https://daspanel.github.io/redis>
 
 ## Environment variables
 | Variable | Optional      | Example Value | Purpose
@@ -25,7 +25,7 @@ docker pull daspanel/daspanel-redis:latest
 
 Run
 ```shell
-docker run -e DASPANEL_MASTER_EMAIL=my@email.com daspanel/daspanel-redis:latest
+docker run -e DASPANEL_MASTER_EMAIL=my@email.com daspanel/redis:latest
 ```
 
 ## Features
@@ -34,5 +34,5 @@ docker run -e DASPANEL_MASTER_EMAIL=my@email.com daspanel/daspanel-redis:latest
 
 ## Additional docs and credits
 
-* [Project home page](https://daspanel.github.io/daspanel-redis)
+* [Project home page](https://daspanel.github.io/redis)
 

@@ -1,5 +1,5 @@
 
-# Changelog - daspanel / daspanel-redis
+# Changelog - daspanel / redis
 
 ### 0.1.0
 __Changes__
