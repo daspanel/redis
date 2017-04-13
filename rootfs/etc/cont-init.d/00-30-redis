@@ -1,0 +1,24 @@
+#!/usr/bin/with-contenv sh
+
+# Installation UUID must be informed
+if [ -z "$DASPANEL_SYS_UUID" ]; then
+    echo "***"
+    echo "ERROR: You must set the env variable DASPANEL_SYS_UUID to a valid UUID"
+    echo "***"
+    exit 1
+fi
+
+export DASPANEL_SYS_HOSTNAME=`cat /opt/daspanel/data/$DASPANEL_SYS_UUID/db/sysconfig.json | /usr/bin/jq -r '.sys.hostname'`
+export DASPANEL_SYS_APISERVER=`cat /opt/daspanel/data/$DASPANEL_SYS_UUID/db/sysconfig.json | /usr/bin/jq -r '.sys.apiserver'`
+
+if [ ! -d "/data/redis" ]; then
+    mkdir -p /data/redis
+fi
+
+# Configure
+/usr/bin/gomplate -d cfg=file:///opt/daspanel/data/$DASPANEL_SYS_UUID/db/sysconfig.json \
+    < /opt/daspanel/conf-templates/redis/redis-local.conf.tmpl \
+    >  /etc/redis-local.conf
+
+# secure daspanel
+chown -R daspanel:daspanel /data/redis
