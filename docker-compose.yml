@@ -1,33 +1,23 @@
 version: '2'
 services:
     daspanel-redis:
-        build:
-            context: .
-            dockerfile: Dockerfile
         image: daspanel/redis
         volumes:
             - ./data:/opt/daspanel/data
         networks:
-            - frontend
             - backend
         env_file:
             - daspanel.env
     daspanel-redis-cli:
-        build:
-            context: .
-            dockerfile: Dockerfile
         image: daspanel/redis
         volumes:
             - ./data:/opt/daspanel/data
         networks:
-            - frontend
             - backend
         env_file:
             - daspanel.env
 
 networks:  
-  frontend:
-    driver: bridge
   backend:
     driver: bridge
 
