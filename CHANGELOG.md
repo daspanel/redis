@@ -3,24 +3,28 @@
 ### redis-0.2.0
 __Changes__
 
-- See changes in CHANGELOG.md
-- bumped to version 0.2.0
-- Initialization of the container using settings obtained from the API server.
-- docker-compose.yml clenaup.
-- Renamed project name.
-- first commit
+
+Released by N/A, Wed 10 May 2017 -
+[see the diff](https://github.com/admindaspanel/redis/compare/...#diff)
+______________
+
+### 0.4.0
+__Changes__
+
+- bumped to version 0.4.0
 
 __Contributors__
 
 - Abner G Jacobsen
 
 Released by Abner G Jacobsen, Wed 10 May 2017 -
-[see the diff](https://github.com/admindaspanel/redis/compare/...#diff)
+[see the diff](https://github.com/admindaspanel/redis/compare/0.3.0...0.4.0#diff)
 ______________
 
 ### 0.3.0
 __Changes__
 
+- See changes in CHANGELOG.md
 - bumped to version 0.3.0
 - Changed relase tag naming convention
 - See changes in CHANGELOG.md
