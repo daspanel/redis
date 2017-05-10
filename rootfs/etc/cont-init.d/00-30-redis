@@ -8,15 +8,28 @@ if [ -z "$DASPANEL_SYS_UUID" ]; then
     exit 1
 fi
 
-export DASPANEL_SYS_HOSTNAME=`cat /opt/daspanel/data/$DASPANEL_SYS_UUID/db/sysconfig.json | /usr/bin/jq -r '.sys.hostname'`
-export DASPANEL_SYS_APISERVER=`cat /opt/daspanel/data/$DASPANEL_SYS_UUID/db/sysconfig.json | /usr/bin/jq -r '.sys.apiserver'`
+case "$DASPANEL_WAIT_FOR_API" in
+    YES|yes|Yes)
+        echo "[DASPANEL] Waiting 60 seconds for API: $0" >&2
+        /opt/daspanel/bin/wait-for-api -t 60 $DASPANEL_SYS_APISERVER/info/status
+        result=$?
+        if [ ! $result -eq 0 ] ; then
+            echo "[DASPANEL] Can not connect to API: $DASPANEL_SYS_APISERVER/info/status" >&2
+            exit 1
+        fi
+        ;;
+    *) 
+        echo "[DASPANEL] Container not need to wait API become online: $0" >&2
+        exit 1
+        ;;
+esac
 
 if [ ! -d "/data/redis" ]; then
     mkdir -p /data/redis
 fi
 
-# Configure
-/usr/bin/gomplate -d cfg=file:///opt/daspanel/data/$DASPANEL_SYS_UUID/db/sysconfig.json \
+/usr/bin/gomplate -d cfg=$DASPANEL_SYS_APISERVER/tenants/$DASPANEL_SYS_UUID \
+    -H "cfg=Authorization: $DASPANEL_SYS_APIKEY" \
     < /opt/daspanel/conf-templates/redis/redis-local.conf.tmpl \
     >  /etc/redis-local.conf
 

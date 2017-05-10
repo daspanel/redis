@@ -1,5 +1,4 @@
 #!/usr/bin/with-contenv sh
 
-exec su-exec daspanel:daspanel /usr/local/bin/redis-server \
-    /etc/redis.conf
+exec su-exec daspanel:daspanel /usr/local/bin/redis-server /etc/redis.conf
 
