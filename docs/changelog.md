@@ -4,13 +4,27 @@
 __Changes__
 
 
-Released by N/A, Wed 10 May 2017 -
+Released by N/A, Wed 21 Jun 2017 -
 [see the diff](https://github.com/admindaspanel/redis/compare/...#diff)
+______________
+
+### 0.5.0
+__Changes__
+
+- bumped to version 0.5.0
+
+__Contributors__
+
+- Abner G Jacobsen
+
+Released by Abner G Jacobsen, Wed 21 Jun 2017 -
+[see the diff](https://github.com/admindaspanel/redis/compare/0.4.0...0.5.0#diff)
 ______________
 
 ### 0.4.0
 __Changes__
 
+- See changes in CHANGELOG.md
 - bumped to version 0.4.0
 
 __Contributors__
