@@ -28,7 +28,7 @@ if [ ! -d "/data/redis" ]; then
     mkdir -p /data/redis
 fi
 
-/usr/bin/gomplate -d cfg=$DASPANEL_SYS_APISERVER/tenants/$DASPANEL_SYS_UUID \
+/opt/daspanel/bin/gomplate -d cfg=$DASPANEL_SYS_APISERVER/tenants/$DASPANEL_SYS_UUID \
     -H "cfg=Authorization: $DASPANEL_SYS_APIKEY" \
     < /opt/daspanel/conf-templates/redis/redis-local.conf.tmpl \
     >  /etc/redis-local.conf

@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -x
+
+# Install build packages
+apk add --no-cache --update --virtual build-deps \
+    build-base  \
+    gcc libressl linux-headers make musl-dev
+
