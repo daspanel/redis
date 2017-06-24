@@ -4,13 +4,28 @@
 __Changes__
 
 
-Released by N/A, Wed 21 Jun 2017 -
+Released by N/A, Sat 24 Jun 2017 -
 [see the diff](https://github.com/admindaspanel/redis/compare/...#diff)
+______________
+
+### 0.6.0
+__Changes__
+
+- bumped to version 0.6.0
+- Removed dependence from daspanel/alpine-base.
+
+__Contributors__
+
+- Abner G Jacobsen
+
+Released by Abner G Jacobsen, Sat 24 Jun 2017 -
+[see the diff](https://github.com/admindaspanel/redis/compare/0.5.0...0.6.0#diff)
 ______________
 
 ### 0.5.0
 __Changes__
 
+- See changes in CHANGELOG.md
 - bumped to version 0.5.0
 
 __Contributors__
