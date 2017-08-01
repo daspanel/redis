@@ -1,2 +1,2 @@
 dir /data/redis/
-requirepass {{ getenv "DASPANEL_SYS_UUID" }}
+requirepass {{ (datasource "cfg").redis.password }}
